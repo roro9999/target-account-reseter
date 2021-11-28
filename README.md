@@ -6,3 +6,9 @@
 ```
 npm install
 ```
+## Run The File
+
+```
+node index
+```
+
