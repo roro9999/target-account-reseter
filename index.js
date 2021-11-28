@@ -15,6 +15,8 @@ const json = JSON.parse(fs.readFileSync('config.json'));
           const page = await context.newPage();
           var email = json['email']
           var password = json['password']
+          var gmailemail = json['gmailemail']
+          var gmailpassword = json['gmailpassword']
 
           await page.goto('https://target.com/account/');
           console.log("Visting Site")
@@ -29,8 +31,8 @@ const json = JSON.parse(fs.readFileSync('config.json'));
           console.log("Sleeping")
           await sleep(20000)
           const imap = new Imap({
-            user: "",
-            password: "",
+            user: gmailemail,
+            password: gmailpassword,
             host: 'imap.gmail.com',
             port: 993,
             tls: true,
