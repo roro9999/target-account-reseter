@@ -52,7 +52,7 @@ const json = JSON.parse(fs.readFileSync('config.json'));
         imap.once('ready', async function () {
             await openInbox(async function (err, box) {
                 if (err) throw err;
-                imap.search(['UNSEEN', ['SINCE', 'Oct 27, 2021'],
+                imap.search(['UNSEEN', ['SINCE', 'Nov 27, 2021'],
                 ['FROM', 'orders@oe1.target.com'],
                 ['SUBJECT', 'Your Target.com password reset code']
                 ], function (err, results) {
